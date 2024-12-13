@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lighterBlue"
+    android:padding="16dp">
+
+    <!-- Geri Butonu -->
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="start"
+        android:layout_marginBottom="16dp"
+        android:background="@color/lighterBlue"
+        android:contentDescription="Geri Dön"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <!-- Başlık -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Not Ekle"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Not Başlığı -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:boxBackgroundColor="@color/colorBackground">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Not Başlığı"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Not Açıklaması -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:boxBackgroundColor="@color/colorBackground">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNoteDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:hint="Not Açıklaması"
+                    android:textColorHint="@android:color/white"
+                    android:textColor="@android:color/white"
+                    android:gravity="top"
+                    android:scrollbars="vertical"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Kaydet Butonu -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kaydet"
+                app:cornerRadius="8dp"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/darkBlue"
+                android:layout_marginBottom="8dp" />
+
+            <!-- Silme Butonu -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDeleteNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sil"
+                app:cornerRadius="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_marginBottom="8dp"
+                android:visibility="gone"
+                app:strokeColor="@color/red_500"
+                android:textColor="@color/red_500" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
