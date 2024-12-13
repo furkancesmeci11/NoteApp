@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">NoteApp</string>
+    <string name="geri_d_n">Geri Dön</string>
+    <string name="not_ekle">Not Ekle</string>
+    <string name="not_ba_l">Not Başlığı</string>
+    <string name="not_uygulamas">Not Uygulaması</string>
+    <string name="notlar">Notlar</string>
 </resources>

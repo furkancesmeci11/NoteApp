@@ -16,7 +16,7 @@
         android:layout_gravity="start"
         android:layout_marginBottom="16dp"
         android:background="@color/lighterBlue"
-        android:contentDescription="Geri Dön"
+        android:contentDescription="@string/geri_d_n"
         android:src="@drawable/baseline_arrow_back_24" />
 
     <!-- Başlık -->
@@ -24,7 +24,7 @@
         android:id="@+id/tvHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Not Ekle"
+        android:text="@string/not_ekle"
         android:textSize="24sp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
@@ -55,7 +55,7 @@
                     android:id="@+id/etNoteTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Not Başlığı"
+                    android:hint="@string/not_ba_l"
                     android:textColorHint="@android:color/white"
                     android:textColor="@android:color/white"
                     android:textSize="18sp" />

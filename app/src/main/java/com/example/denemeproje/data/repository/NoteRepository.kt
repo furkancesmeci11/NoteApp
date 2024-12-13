@@ -9,24 +9,21 @@ class NoteRepository(private val noteDao: NoteDao) {
     val allNotes: Flow<List<NoteModel>> = noteDao.getAllNotes()
 
     // Id'ye gore notlari getirir.
-    fun getNoteById(id:Int): Flow<NoteModel> {
+    fun getNoteById(id: Int): Flow<NoteModel> {
         return noteDao.getNoteById(id)
     }
 
     // Yeni note eklemek icin kullanilir
-    suspend fun insert(note : NoteModel){
+    suspend fun insert(note: NoteModel) {
         noteDao.insertNote(note)
     }
 
-    suspend fun update(note: NoteModel){
+    suspend fun update(note: NoteModel) {
         noteDao.updateNote(note)
     }
 
-    suspend fun delete(note: NoteModel){
+    suspend fun delete(note: NoteModel) {
         noteDao.deleteNote(note)
     }
 
-    suspend fun deleteAll(note: NoteModel){
-        noteDao.deleteAllNote()
-    }
 }
